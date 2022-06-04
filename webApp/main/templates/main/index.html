@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+{% block content %}
+<script>
+    function update() {
+        return location.href = "/update";
+    }
+</script>
+<div class="row mt-5">
+    <div class="col-lg-2 col-0"></div>
+    <div class="col-lg-8 col-12 ">
+        <div class="row ">
+            <div class="col-2 mt-4">
+                <!-- <div style="width: 150px; height: 150px; border-radius:80px; background-color: aquamarine;"></div> -->
+            </div>
+            <div class="col-8">
+                <button class="w-50 btn btn-lg btn-primary mx-auto mb-3"  onclick="update()">Update</button>
+                {% for word in words %}
+                        <div class="mx-auto mb-2" style="height: 40px; width: 500px; background-color: rgba(74, 213, 248, 0.726); margin-bottom: 5px; border-radius:10px">
+                            <h3 style="display: inline-block; padding-left: 10px;">{{word.eng}} - </h4> 
+                            <h4 style="display: inline-block;"> {{word.ru}}</h4>
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-0"></div>
+</div>
+{% endblock %}

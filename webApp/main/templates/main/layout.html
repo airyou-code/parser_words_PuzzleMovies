@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Noto+Sans:wght@500&family=Plus+Jakarta+Sans:wght@300&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet">
+
+</head>
+<script>
+    function menu_lessons(){
+        return location.href = "/user/";
+    }
+    function menu_main(){
+        return location.href = "/"
+    }
+</script>
+
+<body style="background-color: rgb(253, 253, 253);">
+    <header
+        style="border-bottom-style: solid; border-color: rgb(245, 245, 245); border-width: 2px; background-color: rgb(255, 255, 255);">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-4" onclick="menu_main()">
+                        <h5 style=" font-family: 'Ubuntu', sans-serif; margin-top: 25px; text-align: center;"> Main
+                        </h5>
+        
+                    </div>
+                    <div class="col-4" onclick="menu_lessons()">
+                        <h5 style=" font-family: 'Ubuntu', sans-serif; margin-top: 25px; text-align: center;">Lessons
+                        </h5>
+        
+                    </div>
+                    <div class="col-4">
+                        <h5 style="font-family: 'Ubuntu', sans-serif; margin-top: 25px; text-align: center;"> About as
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
